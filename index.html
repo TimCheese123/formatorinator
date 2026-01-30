@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script defer>
+    const fields = [
+  { type: 'text', name: 'name', label: 'Imię' },
+  { type: 'email', name: 'email', label: 'Email' },
+  { type: 'password', name: 'pass', label: 'Hasło' }
+];
+
+const form = document.createElement('form');
+
+fields.forEach(f => {
+  const label = document.createElement('label');
+  label.textContent = f.label;
+
+  const input = document.createElement('input');
+  input.type = f.type;
+  input.name = f.name;
+
+  label.appendChild(input);
+  form.appendChild(label);
+});
+
+const btn = document.createElement('button');
+btn.type = 'submit';
+btn.textContent = 'Wyślij';
+
+form.appendChild(btn);
+document.body.appendChild(form);
+
+</script>
+<body>
+    <header>
+        <nav>
+            
+        </nav>
+    </header>
+        <main>
+            <div id="Id">
+
+            </div>
+            <div id="app">
+
+            </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
